@@ -1,66 +1,57 @@
 package pl.coderslab.oop.workshop2.user;
+import pl.coderslab.oop.workshop2.user.User;
+import pl.coderslab.oop.workshop2.user.UserDao;
 
-import java.sql.*;
+public class MainDao {
 
-public class CreateTable {
-    private static final String url ="jdbc:mysql://localhost:3306/workshop2?useSSl=false&characterEncoding=utf8";
-    private static final String login = "root";
-    private static final String password = "coderslab";
+    private static final UserDao userDao = new UserDao();
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
-        String sql = "create table users (id int(11) not null, username varchar(255), password varchar(255), email varchar(255))";
+        //creating
+        //User user2 = new User();
+        User user = new User( "ikdda", "ikdda@icloud.com","4272347" );
+        User user1 = new User("Ola","olllkregeagglkjgyula@icloud.com","3555656yge3566238");
 
-        String sqlAlter = "ALTER TABLE users MODIFY COLUMN id int primary key ";
+        //User userCreate = userDao.create(user1);
+        //System.out.println("create: " + userCreate);
 
-        String sqlAlterIncrement = "ALTER TABLE users MODIFY COLUMN id int auto_increment ";
+        userDao.create(user);
+        System.out.println("create: " + user);
+        //System.out.println("create: " + userDao.create(user1));
 
-        String sqlAlterUnique = "ALTER TABLE users MODIFY COLUMN password varchar(255) unique key ";
+        //reading
+        User userToRead = userDao.read(1);
+        System.out.println("read: " + userToRead);
 
-        //  ALTER TABLE `users`
-        //
-        //  ADD PRIMARY KEY (`id`),
-        //
-        //  ADD UNIQUE KEY `email` (`email`);
+        //userDao.read(4);
+        //System.out.println("read: " + userDao.read(10));
 
-
-        /*CREATE TABLE `users` (
-
-  `id` int(11) NOT NULL,
-
-  `username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-
-)*/
-        //int id = 2; // numer wiersza do w sql do usunięcia
-        /*String symbol1 = "'christmas tree', ";
-        String carol1 ="'silent night', ";
-        String meal1 = "'borsch'";
-        String symbol2 = "snow";
-        String carol2 = "jingle bell";
-        String meal2 = "ginger bread";*/
-        /*String insert1 = "insert into christmas (symbols, carols, meals) values (" + symbol1 +  carol1 + meal1 +  ");";
-        String deleteId = " delete from christmas where id = ?";
-        String insert2 = "insert into christmas (symbols, carols, meals) values (" + "\'" + symbol2 + "\', \'" + carol2 +  "\', \'" + meal2 + "\' " + ");";*/
-        try
-                (Connection connection = DriverManager.getConnection(url,login,password);
-                 Statement statement = connection.createStatement())
-        {
-            //PreparedStatement preparedStatement = connection.prepareStatement(deleteId);
-            //statement.executeUpdate(sql);
-            //statement.executeUpdate(sqlAlter);
-            //statement.executeUpdate(sqlAlterIncrement);
-            statement.executeUpdate(sqlAlterUnique);
-            //statement.executeUpdate(insert1);
-            //statement.executeUpdate(insert2);
-            //preparedStatement.setInt(1,id);
-            //preparedStatement.executeUpdate();
+        // find all
+        User[] allUse = userDao.findAll();
+        for(User uu : allUse){
+            System.out.println("find all: " + uu);
         }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
+
+        // remove
+        userDao.delete(6);
+
+
+        // update
+        User updated  = userDao.read(13);
+        System.out.println(updated);
+
+        updated.setUsername("ted");
+        updated.setEmail("atd@icloud.com");
+        updated.setPassword("88");
+
+        userDao.update(updated);
+        System.out.println("updated" + updated);
     }
 }
+
+
+
+
+
+

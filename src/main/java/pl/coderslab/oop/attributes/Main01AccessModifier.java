@@ -3,7 +3,7 @@ package pl.coderslab.oop.attributes;
 //
 //        1. Utworzy obiekt klasy `AccessModifier` i przypisze go do zmiennej `testAttribute`.
 //        2. Sprawdź które z atrybutów klasy `AccessModifier` są dostępne.
-public class Main01 {
+public class Main01AccessModifier {
 
     public static void main(String[] args) {
 

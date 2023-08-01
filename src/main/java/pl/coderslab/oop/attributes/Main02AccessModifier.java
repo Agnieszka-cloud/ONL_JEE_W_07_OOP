@@ -9,7 +9,7 @@ które są możliwe do ustawienia.
 
 */
 
-public class Main02 {
+public class Main02AccessModifier {
 
     public static void main(String[] args) {
         AccessModifier testAttributes = new AccessModifier();

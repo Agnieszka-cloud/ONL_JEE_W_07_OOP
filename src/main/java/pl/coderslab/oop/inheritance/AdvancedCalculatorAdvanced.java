@@ -1,20 +1,34 @@
-package pl.coderslab.oop.advanced;
-
-import pl.coderslab.oop.inheritance.Calculator;
+package pl.coderslab.oop.inheritance;
 
 import java.util.Arrays;
 
-public class AdvancedCalculator extends Calculator {
+public class AdvancedCalculatorAdvanced extends Calculator {
     public static void main(String[]args){
 
+        AdvancedCalculatorAdvanced advancedCalculatorAdvanced = new AdvancedCalculatorAdvanced();
+        Calculator calculator = new Calculator();
         AdvancedCalculator advancedCalculator = new AdvancedCalculator();
-        System.out.println(advancedCalculator.computeCircleArea(5));
-        System.out.println(advancedCalculator.computeCircleArea(7));
-        advancedCalculator.printGlobalOperations();
+
+        System.out.println(advancedCalculatorAdvanced.computeCircleArea(5));
+        System.out.println(advancedCalculatorAdvanced.computeCircleArea(7));
+
+        advancedCalculatorAdvanced.add(4,3);
+
+
+        advancedCalculatorAdvanced.printGlobalOperations();
         System.out.println("------");
-        advancedCalculator.printGlobalOperations(2);
+        advancedCalculatorAdvanced.printGlobalOperations(1);
         System.out.println("------");
-        advancedCalculator.printGlobalOperationString("2");
+        advancedCalculatorAdvanced.printGlobalOperationString("2");
+        System.out.println("------");
+
+        calculator.subtract(5,7);
+        advancedCalculator.pow(3,3);
+        advancedCalculator.root(27,3);
+
+
+        calculator.printOption();
+        advancedCalculator.printOperations();
 
     }
     private static final double PI = 3.14;

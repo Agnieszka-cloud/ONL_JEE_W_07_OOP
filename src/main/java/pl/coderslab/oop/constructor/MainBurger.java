@@ -1,21 +1,20 @@
 package pl.coderslab.oop.constructor;
 
 public class MainBurger {
+    private String size  = "small";
+    private double price = 17.99;
+
     public static void  main(String[] args){
-        Calculator cal = new Calculator();
 
-        double addResult = cal.add(5,8);
-        System.out.println(addResult);
-        cal.add(5,8);
-        cal.multiply(8,0);
-        cal.subtract(8,5);
-        cal.divide(8,0);
-
-        cal.printOperations();
-        System.out.println("Jestem po czyszczenia");
-
-        cal.add(8, 9);
-        //cal.printOperatiobn();
+        Burger burger1 = new Burger("big",34.99);
+        System.out.println(burger1.size);
+        System.out.println(burger1.price);
+        System.out.println();
+        Burger burger = new Burger();
+        System.out.println(burger.size);
+        System.out.println(burger.price);
+        System.out.println();
+        System.out.println(burger1.toString());
 
     }
 }

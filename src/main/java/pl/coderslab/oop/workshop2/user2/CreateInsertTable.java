@@ -6,7 +6,6 @@ import pl.coderslab.oop.workshop2.user.UserDao;
 
 import java.sql.*;
 
-
 public class CreateInsertTable {
     //private static final String sql ="create table meble (subscriberId int auto_increment, name varchar(255),primary key (subscriberId))";
 

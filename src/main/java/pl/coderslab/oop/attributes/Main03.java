@@ -4,9 +4,10 @@ package pl.coderslab.oop.attributes;
 // utwórz obiekt klasy `Person` o nazwie `person`,
 //a następnie wyświetl kolejno atrybuty
 // klasy (name, surname, age, gender).
-public class MainPerson {
+public class Main03 {
 
     public static void main(String[] args) {
+        // obiekt klasy Person o nazwie person
         Person person = new Person();
         System.out.println(person.name);
         System.out.println(person.surname);

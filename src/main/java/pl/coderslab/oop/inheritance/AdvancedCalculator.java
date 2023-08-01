@@ -16,9 +16,9 @@ package pl.coderslab.oop.inheritance;
 
 import pl.coderslab.oop.constructor.Calculator;
 
-public class AdvancedCalculatorAdvanced extends Calculator {
+public class AdvancedCalculator extends Calculator {
     //konstruktor
-    public AdvancedCalculatorAdvanced() {
+    public AdvancedCalculator() {
 
         this.historyOfOperations = new String[0];
     }
@@ -30,7 +30,7 @@ public class AdvancedCalculatorAdvanced extends Calculator {
 
     public double pow(double num1, double num2) {
         double result = Math.pow( num1, num2);
-        String singleOperationInHistoryOfO= num1 + " ^ " + num2 +" equals " + result;
+        String singleOperationInHistoryOfO = "Potęgowanie: " + num1 + " ^ " + num2 +" equals " + result;
         addHistory(singleOperationInHistoryOfO);
         return result;
     }
@@ -52,7 +52,7 @@ public class AdvancedCalculatorAdvanced extends Calculator {
     //                        27            3
     public double root(double num1, double num2){
         double result = Math.pow(num1,1 / num2);
-        String singleOperationInHistoryOfO = num2 + " root of " + num1 + " equals " + result;
+        String singleOperationInHistoryOfO = "Pierwiastek z liczby: " + num2 + " root of " + num1 + " equals " + result;
         addHistory(singleOperationInHistoryOfO);
         return result;
     }

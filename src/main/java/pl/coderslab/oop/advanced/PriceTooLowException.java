@@ -1,4 +1,7 @@
 package pl.coderslab.oop.advanced;
 
-public class PriceTooLowExeption {
+public class PriceTooLowException extends RuntimeException{
+    public PriceTooLowException(String message){
+        super(message);
+    }
 }

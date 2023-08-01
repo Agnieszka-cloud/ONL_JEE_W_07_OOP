@@ -1,4 +1,4 @@
-## Zadanie 1 - rozwiązywane z wykładowcą
+~~~~~~**_``_**~~~~~~## Zadanie 1 - rozwiązywane z wykładowcą
 
 Utwórz klasę `Burger`, dodaj w niej atrybuty:
 

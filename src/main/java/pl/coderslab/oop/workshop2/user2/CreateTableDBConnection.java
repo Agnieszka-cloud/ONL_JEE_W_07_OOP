@@ -2,7 +2,7 @@ package pl.coderslab.oop.workshop2.user2;
 
 import java.sql.*;
 
-public class CreateTable {
+public class CreateTableDBConnection {
     private static final String url ="jdbc:mysql://localhost:3306/workshop2?useSSl=false&characterEncoding=utf8";
     private static final String login = "root";
     private static final String password = "coderslab";

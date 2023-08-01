@@ -5,7 +5,7 @@ package pl.coderslab.oop.methods;
 //ustawi za pomocą wcześniej utworzonych metod wszystkie
 // atrybuty klasy.
 
-public class Main01Person {
+public class Main01PersonProductCar {
     public static void main(String[] args){
         Person person = new Person("Jan","Kowalski");
 
@@ -13,11 +13,12 @@ public class Main01Person {
         person.setSurname("Doberska");
         person.setAge(42);
         person.setGender('F');
+        person.increaseAge();
 
 
         System.out.println(person.getFullName());
         System.out.println(person.age());
-        person.increaseAge();
+        System.out.println(person.getAllDataOfThePerson());
 
 
         Car car = new Car();
@@ -26,7 +27,9 @@ public class Main01Person {
         car.setPrice(100.000);
         System.out.println(car);
 
+
         Product product = new Product();
         System.out.println(product);
+        System.out.println(product.toString());
     }
 }

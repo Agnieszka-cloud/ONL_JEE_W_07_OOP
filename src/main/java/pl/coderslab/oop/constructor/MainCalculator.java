@@ -1,6 +1,6 @@
 package pl.coderslab.oop.constructor;
 
-public class Main01 {
+public class MainCalculator {
     public static void  main(String[] args) {
         // obiekt
         Calculator calculator = new Calculator();
@@ -26,6 +26,5 @@ public class Main01 {
         calculator.subtract(8, 9);
         calculator.divide(8, 9);
         calculator.printOperations();
-
     }
 }

@@ -1,2 +1,5 @@
-package pl.coderslab.oop.firstclass;public class Dog {
+package pl.coderslab.oop.firstclass;
+//## Zadanie 1
+//Stwórz klasę `Dog`.
+public class Dog {
 }
